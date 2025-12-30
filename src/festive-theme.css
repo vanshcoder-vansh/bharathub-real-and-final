@@ -1,0 +1,168 @@
+/* Festive Theme - Christmas & New Year 2024-2025 */
+/* Subtle, professional seasonal styling */
+
+:root {
+  --festive-red: #C41E3A;
+  --festive-green: #165B33;
+  --festive-gold: #D4AF37;
+  --festive-white: #FFFAFA;
+  --festive-light-red: #FFF5F5;
+  --festive-glow: rgba(212, 175, 55, 0.3);
+}
+
+/* Only apply if festive theme is active */
+body.festive-theme {
+  background: linear-gradient(180deg, #FFFAFA 0%, #FFFFFF 100%);
+}
+
+/* Festive accent on navbar */
+.festive-theme nav {
+  border-bottom: 2px solid var(--festive-gold);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.1);
+}
+
+/* Logo festive glow */
+.festive-theme nav .bg-blue-600 {
+  background: linear-gradient(135deg, var(--festive-red) 0%, var(--festive-green) 100%) !important;
+  box-shadow: 0 4px 12px var(--festive-glow);
+}
+
+/* Festive button hover effects */
+.festive-theme button.bg-blue-600:hover,
+.festive-theme .bg-blue-600:hover {
+  background: linear-gradient(135deg, var(--festive-red) 0%, #C41E3A 100%) !important;
+  box-shadow: 0 6px 20px var(--festive-glow);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Festive accent on cards */
+.festive-theme .bg-white {
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.festive-theme .shadow-md:hover {
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2) !important;
+}
+
+/* Hero section festive styling */
+.festive-theme .bg-gradient-to-b {
+  background: linear-gradient(180deg, var(--festive-light-red) 0%, #FFFFFF 100%) !important;
+}
+
+/* Product card badges with festive colors */
+.festive-theme .bg-red-500 {
+  background: var(--festive-red) !important;
+  box-shadow: 0 2px 8px rgba(196, 30, 58, 0.3);
+}
+
+.festive-theme .bg-green-500 {
+  background: var(--festive-green) !important;
+}
+
+.festive-theme .bg-yellow-500 {
+  background: var(--festive-gold) !important;
+}
+
+/* Festive decorative elements */
+.festive-snowflake {
+  position: fixed;
+  color: var(--festive-gold);
+  font-size: 20px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+  animation: gentle-float 8s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(180deg); }
+}
+
+/* Position snowflakes */
+.festive-snowflake:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.festive-snowflake:nth-child(2) { top: 20%; right: 10%; animation-delay: 2s; }
+.festive-snowflake:nth-child(3) { top: 40%; left: 15%; animation-delay: 4s; }
+.festive-snowflake:nth-child(4) { top: 60%; right: 5%; animation-delay: 6s; }
+
+/* Festive category cards */
+.festive-theme .rounded-xl {
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.festive-theme .rounded-xl:hover {
+  border: 2px solid var(--festive-gold);
+}
+
+/* Footer festive accent */
+.festive-theme footer {
+  background: linear-gradient(180deg, var(--festive-green) 0%, #0f1419 100%);
+  border-top: 3px solid var(--festive-gold);
+}
+
+/* Admin panel festive accent */
+.festive-theme .text-blue-600 {
+  color: var(--festive-red) !important;
+}
+
+.festive-theme .bg-blue-100 {
+  background: var(--festive-light-red) !important;
+}
+
+/* Subtle festive stars */
+.festive-star {
+  position: fixed;
+  color: var(--festive-gold);
+  font-size: 16px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+.festive-star:nth-child(1) { top: 5%; right: 20%; animation-delay: 0s; }
+.festive-star:nth-child(2) { top: 15%; left: 25%; animation-delay: 1s; }
+.festive-star:nth-child(3) { top: 70%; right: 15%; animation-delay: 2s; }
+
+/* Mobile responsive - reduce decorations */
+@media (max-width: 768px) {
+  .festive-snowflake,
+  .festive-star {
+    display: none;
+  }
+  
+  .festive-theme nav {
+    border-bottom: 1px solid var(--festive-gold);
+  }
+}
+
+/* Festive glow on primary elements */
+.festive-theme .text-blue-600 {
+  color: var(--festive-red) !important;
+  text-shadow: 0 0 10px rgba(196, 30, 58, 0.1);
+}
+
+/* Category section festive background */
+.festive-theme section:nth-child(even) {
+  background: linear-gradient(180deg, #FFFAFA 0%, #FFFFFF 100%);
+}
+
+/* Checkout button special festive style */
+.festive-theme button:contains('Checkout'),
+.festive-theme button:contains('Place Order') {
+  background: linear-gradient(135deg, var(--festive-red) 0%, var(--festive-green) 100%) !important;
+  box-shadow: 0 8px 24px var(--festive-glow);
+}
+
+/* Price tags festive highlight */
+.festive-theme .text-green-600 {
+  color: var(--festive-green) !important;
+  font-weight: 600;
+}
